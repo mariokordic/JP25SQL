@@ -3,9 +3,9 @@ CREATE database fizerskisalonjp25;
 USE fizerskisalonjp25;
 
 CREATE table djelatnik(
-    sifra int,
-    ime varchar(50),
-    prezime varchar(50),
+    sifra int  not null primary key auto_increment,
+    ime varchar(50)  not null,
+    prezime varchar(50)  not null,
     adresa varchar(50),
     grad varchar(50),
     drzava varchar(20),
@@ -15,40 +15,40 @@ CREATE table djelatnik(
 
 CREATE table korisnik(
 
-    sifra int,
-    ime varchar(50),
-    prezime varchar(50),
+    sifra int  not null primary key auto_increment,
+    ime varchar(50)  not null,
+    prezime varchar(50)  not null,
     broj_mobitela varchar(30),
     adresa varchar(50),
     grad varchar (50),
     drzava varchar(20),
     postanski_broj varchar(10)
     spol char(1),
-    usluga int,
-    termin int,
+    usluga int  not null,
+    termin int  not null,
 );
 
 CREATE table usluga(
-    sifra int,
-    naziv varchar(50),
-    trajanje int,
-    djelatnik int,
-    korisnik int,
-    isporucena_usluga int,
-    cijena decimal(18,2)
+    sifra int  not null primary key auto_increment,
+    naziv varchar(50)  not null,
+    trajanje int  not null,
+    djelatnik int  not null,
+    korisnik int  not null,
+    isporucena_usluga int  not null,
+    cijena decimal(18,2)  not null
 );
 
 CREATE table termin(
-   sifra int,
-   djelatnik int,
-   korisnik int,
+   sifra int  not null primary key auto_increment,
+   djelatnik int  not null,
+   korisnik int  not null,
    datum_i_vrijeme datetime
 );
 
 CREATE table isporucena_usluga(
-    sifra int,
-    usluga int,
-    djelatnik int,
-    termin int,
-    ukupna_cijena decimal(18,2)
+    sifra int  not null primary key auto_increment,
+    usluga int  not null,
+    djelatnik int not null,
+    termin int  not null,
+    ukupna_cijena decimal(18,2) not null
 );
