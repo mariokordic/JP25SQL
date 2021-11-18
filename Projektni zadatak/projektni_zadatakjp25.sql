@@ -44,3 +44,11 @@ CREATE table termin(
    korisnik int,
    datum_i_vrijeme datetime
 );
+
+CREATE table isporucena_usluga(
+    sifra int,
+    usluga int,
+    djelatnik int,
+    termin int,
+    ukupna_cijena decimal(18,2)
+);
