@@ -27,3 +27,13 @@ CREATE table korisnik(
     usluga int,
     termin int,
 );
+
+CREATE table usluga(
+    sifra int,
+    naziv varchar(50),
+    trajanje int,
+    djelatnik int,
+    korisnik int,
+    isporucena_usluga int,
+    cijena decimal(18,2)
+);
