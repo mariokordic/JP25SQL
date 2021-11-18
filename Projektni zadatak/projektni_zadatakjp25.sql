@@ -14,7 +14,6 @@ CREATE table djelatnik(
 
 
 CREATE table korisnik(
-
     sifra int  not null primary key auto_increment,
     ime varchar(50)  not null,
     prezime varchar(50)  not null,
@@ -22,10 +21,10 @@ CREATE table korisnik(
     adresa varchar(50),
     grad varchar (50),
     drzava varchar(20),
-    postanski_broj varchar(10)
+    postanski_broj varchar(10),
     spol char(1),
-    usluga int  not null,
-    termin int  not null,
+    usluga int not null,
+    termin int not null
 );
 
 CREATE table usluga(
