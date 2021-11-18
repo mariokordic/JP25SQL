@@ -37,3 +37,10 @@ CREATE table usluga(
     isporucena_usluga int,
     cijena decimal(18,2)
 );
+
+CREATE table termin(
+   sifra int,
+   djelatnik int,
+   korisnik int,
+   datum_i_vrijeme datetime
+);
