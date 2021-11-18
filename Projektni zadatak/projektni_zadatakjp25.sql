@@ -51,3 +51,12 @@ CREATE table isporucena_usluga(
     termin int  not null,
     ukupna_cijena decimal(18,2) not null
 );
+
+
+alter table usluga add foreign key (djelatnik) references djelatnik(sifra);
+alter table termin add foreign key (djelatnik) references djelatnik(sifra);
+alter table isporucena_usluga add foreign key (djelatnik) references djelatnik(sifra);
+alter table isporucena_usluga add foreign key (termin) references termin(sifra);
+alter table korisnik add foreign key (termin) references termin(sifra);
+alter table usluga add foreign key (korisnik) references korisnik(sifra);
+alter table isporucena_usluga add foreign key (usluga) references usluga(sifra);
