@@ -31,7 +31,6 @@ CREATE table usluga(
     trajanje int  not null,
     djelatnik int  not null,
     korisnik int  not null,
-    isporucena_usluga int  not null,
     cijena decimal(18,2)  not null
 );
 
