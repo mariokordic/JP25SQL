@@ -60,3 +60,6 @@ alter table isporucena_usluga add foreign key (termin) references termin(sifra);
 alter table korisnik add foreign key (termin) references termin(sifra);
 alter table usluga add foreign key (korisnik) references korisnik(sifra);
 alter table isporucena_usluga add foreign key (usluga) references usluga(sifra);
+
+insert into djelatnik (sifra,ime,prezime)
+values (null,'Mirela','Čulić');
