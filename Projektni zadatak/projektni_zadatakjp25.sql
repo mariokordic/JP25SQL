@@ -60,3 +60,16 @@ alter table isporucena_usluga add foreign key (usluga) references usluga(sifra);
 
 insert into djelatnik (sifra,ime,prezime)
 values (null,'Mirela','Čulić');
+
+#1
+insert  into korisnik (sifra,ime,prezime,broj_mobitela,adresa,grad,drzava,postanski_broj,spol)
+values (null,'Marija','Magusić','0981767036','Ilirska 56','Osijek','Hrvatska','31000','Ž');
+#1
+insert  into usluga (sifra,naziv,trajanje,djelatnik,korisnik,cijena)
+values (null,'Feniranje','30',1,1,50);
+#1
+insert  into termin (sifra, djelatnik, korisnik,datum_i_vrijeme)
+values (null,1,1,'2021-11-22 20:30:00');
+#1
+insert into isporucena_usluga (sifra,usluga,djelatnik,termin,ukupna_cijena)
+values (null, 1,1,1,50);
