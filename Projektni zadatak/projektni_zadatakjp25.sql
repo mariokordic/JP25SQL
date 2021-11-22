@@ -22,9 +22,7 @@ CREATE table korisnik(
     grad varchar (50),
     drzava varchar(20),
     postanski_broj varchar(10),
-    spol char(1),
-    usluga int not null,
-    termin int not null
+    spol char(1)
 );
 
 CREATE table usluga(
@@ -57,7 +55,7 @@ alter table usluga add foreign key (djelatnik) references djelatnik(sifra);
 alter table termin add foreign key (djelatnik) references djelatnik(sifra);
 alter table isporucena_usluga add foreign key (djelatnik) references djelatnik(sifra);
 alter table isporucena_usluga add foreign key (termin) references termin(sifra);
-alter table korisnik add foreign key (termin) references termin(sifra);
+alter table termin add foreign key (korisnik) references korisnik(sifra);
 alter table usluga add foreign key (korisnik) references korisnik(sifra);
 alter table isporucena_usluga add foreign key (usluga) references usluga(sifra);
 
