@@ -113,12 +113,16 @@ select * from izdavac where naziv like "%d.o.o";
 
 ##### baza world
 # odaberite sve zemlje iz Europe
-
+select * from country;
+select * from country where Continent = 'Europe';
 # unesite mjesto Donji Miholjac
-
+select * from city where CountryCode = 'HRV' and  District ='Osijek-Baranja';
+insert into city(ID,name,CountryCode,District,Population)
+values (null,'Donji Miholjac','HRV','Osijek-Baranja',9491);
 # Promjenite Donji Miholjac u Špičkovinu
-
+update  city set name = 'Lapac' where id='4080';
 # Obrišite mjesto Špičkovina
+delete from city where name = 'Lapac';
 
 
 
