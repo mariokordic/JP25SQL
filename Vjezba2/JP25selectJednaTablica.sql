@@ -71,33 +71,45 @@ select * from osoba where sifra between 5 and 15;
 
 # Izlistajte prezimena i imena osoba
 
-
+SELECT prezime,ime FROM osoba;
 
 
 # baza mjesta
 # odaberite sva mjesta koja se nalaze u Osječko baranjskoj
 # županiji
-
+#69
+SELECT * FROM mjesto WHERE postanskibroj LIKE "31%";
 # odaberite sva mjesta koja u sebi imaju niz znakova ac
+#101
+select * from mjesto where naziv like '%ac%';
 
 # Dodajte mjesto Programovci u Osječko baranjskoj županiji
-
+select * from mjesto where naziv='Programovci';
+insert into mjesto(postanskibroj,zupanija,naziv)
+values (53297,9,'Programovci');
 ################################################
 #DOMAĆA ZADAĆA: UČITATI SVE BAZE
 
 ##### baza knjiznica
 # odaberite sve autore za koje ne znamo datum rođenja
-
+#1
+select * from autor where datumrodenja is null;
 # Unesite sebe kao autora
-
+select * from autor;
+insert into autor (sifra,ime,prezime,datumrodenja)
+values (4,'Mario','Kordi�','1984-03-05');
 # odaberite autore koji su rođeni na Vaš datum rođenja
 # uključujući i godinu
-
+#1
+select * from autor where datumrodenja = '1984-03-05';
 # odaberite autore koji se zovu kao Vi
-
+#2
+select * from autor where ime = 'Mario';
 # odaberite sve izdavače koji su 
 # društva s ograničenom odgovornošću
-
+#3
+select * from izdavac;
+select * from izdavac where naziv like "%d.o.o";
 
 ##### baza world
 # odaberite sve zemlje iz Europe
