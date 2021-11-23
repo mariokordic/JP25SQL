@@ -45,7 +45,7 @@ CREATE table isporucena_usluga(
     usluga int  not null,
     termin int  not null,
     kolicina int not null,
-    ukupna_cijena decimal(18,2) not null
+    cijena decimal(18,2) not null
 );
 
 
