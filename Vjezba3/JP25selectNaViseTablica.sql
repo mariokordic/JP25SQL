@@ -75,7 +75,7 @@ where b.aktivan is null;
 #680
 select b.ime,b.prezime
 from katalog a inner join autor b on a.autor=b.sifra
-where a.naslov not like '%b';
+where a.naslov not like '%b%';
 
 #630
 select distinct b.ime,b.prezime
