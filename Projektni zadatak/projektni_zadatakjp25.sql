@@ -58,7 +58,29 @@ alter table isporucena_usluga add foreign key (usluga) references usluga(sifra);
 insert into djelatnik (sifra,ime,prezime)
 values (null,'Mirela','Čulić');
 
+insert into djelatnik (sifra,ime,prezime)
+values (null,'Maja','Varga');
 #1
 insert  into korisnik (sifra,ime,prezime,broj_mobitela,adresa,grad,drzava,postanski_broj,spol)
 values (null,'Marija','Magusić','0981767036','Ilirska 56','Osijek','Hrvatska','31000','Ž'),
-        (null,'Mario','Kordić','0997078094','Ilirska 56','Osijek','Hrvatska','31000','M');
+        (null,'Mario','Kordić','0997078094','Ilirska 56','Osijek','Hrvatska','31000','M'),
+        (null,'Tajana','Mak','0982539020','Vijenac Petrove Gore 5','Osijek','Hrvatska','31000','Ž');
+
+insert into termin(sifra,djelatnik,korisnik,datum_i_vrijeme,napomena)
+values(null,1,1,'2021-11-30 12:30','Bojanje - Crvena'),
+      (null,1,2,'2021-12-01 11:10','Muško šišanje, kasnit će možda 10 minuta'),
+      (null,2,3,'2021-12-01 10:00','Trajna - minival');
+
+
+insert into usluga(sifra,naziv,trajanje,cijena)
+values(null,'Bojanje',90, 180),
+      (null,'M. šišanje',30, 45),
+      (null,'Minival',120,280),
+      (null,'Ž. šišanje',60,90);
+
+
+insert into isporucena_usluga(sifra,usluga,termin,kolicina,cijena)
+values(null,1,1,1, 180),
+      (null,2,2,1, 90),
+      (null,3,3,1, 45),
+      (null,4,3,1,280);
